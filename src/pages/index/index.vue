@@ -8,7 +8,7 @@
       <img src="/static/images/make_03.png" alt="">
     </div>
      <div class="makeBox" v-show="isOpen">
-       <div class="makeItem">
+       <div class="makeItem" @click="sendMessage">
          <img src="/static/images/make_13.png"/>
          <span>图片</span>
        </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import sendMessage from '../../api/makePicture';
 
 export default {
   data() {
@@ -43,6 +44,10 @@ export default {
     bindViewTap() {
       const url = '../logs/main';
       wx.navigateTo({ url });
+    },
+    sendMessage() {
+      console.warn('111');
+      sendMessage();
     },
     getUserInfo() {
       // 调用登录接口
