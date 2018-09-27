@@ -1,8 +1,9 @@
-import fly from 'flyio/dist/npm/wx';
+const Fly = require('flyio/dist/npm/wx');
+
+const fly = new Fly();
 
 fly.interceptors.request.use((request) => {
-  request.baseURL = 'http://photo.jinwentech.cn';
-  console.warn('request', request);
+  request.baseURL = 'https://photo.jinwentech.cn';
   return request;
 });
 

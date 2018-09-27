@@ -1,6 +1,4 @@
-const Fly = require('flyio/dist/npm/wx');
-
-const fly = new Fly();
+import fly from './config';
 
 function sendMessage(query) {
   return fly.get('/api/prame', query);

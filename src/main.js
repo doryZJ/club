@@ -11,24 +11,24 @@ export default {
   // 这个字段走 app.json
   config: {
     // 页面前带有 ^ 符号的，会被编译成首页，其他页面可以选填，我们会自动把 webpack entry 里面的入口页面加进去
-    pages: ['pages/home/main', '^pages/index/main'],
+    pages: ['pages/home/main', '^pages/uploadProduct/main'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black',
     },
-    tabBar: {
-      list: [{
-        pagePath: 'pages/home/main',
-        text: '发现',
-      }, {
-        pagePath: 'pages/index/main',
-        text: '开始制作',
-      }, {
-        pagePath: 'pages/index/main',
-        text: '我的',
-      }],
-    },
+    // tabBar: {
+    //   list: [{
+    //     pagePath: 'pages/home/main',
+    //     text: '发现',
+    //   }, {
+    //     pagePath: 'pages/index/main',
+    //     text: '开始制作',
+    //   }, {
+    //     pagePath: 'pages/index/main',
+    //     text: '我的',
+    //   }],
+    // },
   },
 };
